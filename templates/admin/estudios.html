@@ -1,0 +1,72 @@
+{% include 'admin/header.html' %}
+
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-5">
+           <div class="card">
+            <div class="card-header">
+                Datos del nuevo estudio
+            </div>
+            <div class="card-body">
+                <form action="/admin/estudios/save" method="post" enctype="multipart/form-data">
+
+                    <div class="mb-3">
+                      <label for="textNombre" class="form-label">Titulo del curso</label>
+                      <input type="text"
+                        class="form-control" name="textNombre" id="textNombre" aria-describedby="helpId" placeholder="Nombre del Titulo" required>                      
+                    </div>
+                    <div class="mb-3">
+                      <label for="myFile" class="form-label">Select Image</label>
+                      <input type="file"
+                        class="form-control" name="myFile" id="myFile" aria-describedby="helpId" placeholder="Colocar Imagen">
+                    </div>
+                    <div class="mb-3">
+                        <label for="textAcademia" class="form-label">Academia</label>
+                        <input type="text"
+                          class="form-control" name="textAcademia" id="textAcademia" aria-describedby="helpId" placeholder="Nombre de Academia">
+                          <label for="urlAcademia" class="form-label"></label>
+                        <input type="text"
+                          class="form-control" name="urlAcademia" id="urlAcademia" aria-describedby="helpId" placeholder="URL">                          
+                      </div>                  
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+
+                </form>
+            </div>
+            <div class="card-footer text-muted">
+                <!--footer-->
+            </div>
+           </div>
+        </div>
+        <div class="col-7">
+            
+            <div class="table-responsive">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Academia</th>
+                            <th scope="col">Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <td scope="row">1</td>
+                            <td>HTML</td>
+                            <td>URL.jpg</td>
+                            <td>w3schools</td>                            
+                            <td>Eliminar</td>
+                        </tr>                     
+                    </tbody>
+                </table>
+            </div>
+            
+
+        </div>
+        
+    </div>
+</div>
+
+{% include 'admin/fooder.html' %}
